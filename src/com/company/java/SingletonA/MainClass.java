@@ -3,10 +3,17 @@ package com.company.java.SingletonA;
 public class MainClass {
 
 	public static void main(String[] args) {
-		SingletonSimpleEager s1 = SingletonSimpleEager.getInstance();
-		SingletonSimpleEager s2 = SingletonSimpleEager.getInstance();
-		System.out.println(s1);
-		System.out.println(s2);
+		SingletonSimpleEager ss = SingletonSimpleEager.getInstance();
+		SingletonSimpleEager ss1 = SingletonSimpleEager.getInstance();
+		SingletonSimpleEager ss2 = SingletonSimpleEager.getInstance();
+		int s1,s2,s3;
+		s1 = ss.hashCode();
+		s2 = ss1.hashCode();
+		s3 = ss2.hashCode();
+		if (s1 == s2 && s2 == s3)
+		{
+			System.out.print("Ta sama referencja");
+		}
 	}
 
 }
